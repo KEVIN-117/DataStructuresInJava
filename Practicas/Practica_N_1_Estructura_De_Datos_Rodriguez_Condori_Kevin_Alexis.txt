@@ -1,0 +1,86 @@
+	
+	PRACTICA 1 ESTRUCTURA DE DATOS GRUPO 2
+	Nombre: Rodriguez Condori Kevin Alexis
+	
+
+/*Pregunta 1:
+Realice un programa que dado un número por teclado, visualice su correspondiente factorial
+Por ejemplo de 4 su factorial es 24 (1 X 2 X 3 X 4)*/
+
+import java.util.Scanner;
+public class Example_1 {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int number = input.nextInt();
+        int aux = 1;
+        int facrorial = aux;
+        while (aux < number) {    
+            aux++;
+            facrorial = facrorial*aux;
+        }
+        System.out.print(facrorial);
+    }
+}
+
+
+
+/*Pregunta 2:
+Realice un programa para calcular el promedio de N números introducidos por teclado.*/
+
+import java.text.DecimalFormat;
+import java.util.Scanner;
+public class Example_2 {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int n = input.nextInt();
+        double suma = 0;
+        double contador = 0;
+        while (contador < n) {            
+            double number = input.nextInt();
+            suma += number;
+            contador++;  
+        }
+        DecimalFormat format = new DecimalFormat("#.####");
+        System.out.println(format.format((suma/contador)));
+    }
+}
+
+
+
+
+/*Pregunta 3:
+Realice un programa que muestre los N números de la serie Fibonacci*/
+
+import java.util.Scanner;
+public class Example_3 {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int number = input.nextInt();
+        int num_1=0;
+        int num_2=1;
+        int sum = 0 ;
+        for(int i=1; i<=number; ++i) {
+            num_1 = num_2;
+            num_2=sum;
+            sum = num_1 + num_2;
+            System.out.print(sum +" ");
+        }
+    }
+}
+
+
+
+/*Pregunta 4:
+Realice un programa para calcular el valor de y, dado el valor x:*/
+
+import java.text.DecimalFormat;
+import java.util.Scanner;
+public class Example_4 {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int x = input.nextInt();
+        double y = (Math.pow((1-x), 5))/Math.sqrt(x);
+        DecimalFormat format = new DecimalFormat("#.###");
+        System.out.println(format.format(y));
+    }
+}
